@@ -4,12 +4,15 @@ import { App } from './pages/App/Index'
 import { Reset } from './styles/reset'
 import { ThemeProvider } from 'styled-components'
 import { appTheme } from './styles/theme'
+import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
-    <ThemeProvider theme={appTheme}>
+    <QueryClientProvider client = {new QueryClient()}>
+      <ThemeProvider theme={appTheme}>
       <App />
       <Reset/>
-    </ThemeProvider>
+      </ThemeProvider>
+    </QueryClientProvider>
   </React.StrictMode>,
 )
