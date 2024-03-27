@@ -1,9 +1,11 @@
 import { Container } from "./style";
 
-export function Fotter() {    
-    return(
-        <Container>
-            <h1>Fotter</h1>
-        </Container>
-    )
+export function Footer() {
+  return (
+    <Container>
+      <a href="https://emanuelquintino.github.io/Page-WDC/" target="_blank">
+        Reprograma Jucás
+      </a>
+    </Container>
+  );
 }

@@ -1,15 +1,17 @@
-import { Fotter } from "../../components/Footer/Index";
-import { Header } from "../../components/Header/Index";
+import { Outlet } from "react-router-dom";
+import { Footer } from "../../components/Footer";
+import { Header } from "../../components/Header";
 import { Container } from "./style";
 
-export function App() {    
-    return(
-        <Container>
-            <Header />
+export function App() {
+  return (
+    <Container>
+      <Header />
 
-            <h1>App</h1>
+      {/* outlet is main */}
+      <Outlet />
 
-            <Fotter />
-        </Container>
-    )
+      <Footer />
+    </Container>
+  );
 }
